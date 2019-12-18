@@ -1,9 +1,16 @@
 <template>
   <div class="login-container">
+    <div class="title-main">
+      <img src="../../assets/logo.png" alt="" style="width: 60px;vertical-align: bottom;border-radius: 50%">
+      <a class="title">浪浪之家后台管理系统</a>
+    </div>
+    <div class="login-bg" style="background-color: #0e90d2;height:300px">
+      222
+    </div>
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
 
       <div class="title-container">
-        <h3 class="title">Login Form</h3>
+        <h3 class="title">用户登录</h3>
       </div>
 
       <el-form-item prop="username">
@@ -41,7 +48,7 @@
         </span>
       </el-form-item>
 
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">Login</el-button>
+      <el-button :loading="loading" type="primary" style="width:80%;margin:0 50px;" @click.native.prevent="handleLogin">登 录</el-button>
 
       <div class="tips">
         <span style="margin-right:20px;">username: admin</span>
@@ -141,6 +148,10 @@ $cursor: #fff;
 
 /* reset element-ui css */
 .login-container {
+  /*background: url("../../assets/index/login.jpg") no-repeat center;*/
+  .el-form {
+    background-color: #0e90d2;
+  }
   .el-input {
     display: inline-block;
     height: 47px;
@@ -180,16 +191,25 @@ $light_gray:#eee;
 .login-container {
   min-height: 100%;
   width: 100%;
-  background-color: $bg;
   overflow: hidden;
-
+  .title-main {
+    padding-left: 40px;
+    padding-top:30px;
+    .title {
+      font-size: 33px;
+      color: #2288cc;
+      font-weight: bold;
+      line-height: 56px;
+    }
+  }
   .login-form {
-    position: relative;
+    position:absolute;
+    right:20px;
+    top:160px;
     width: 520px;
     max-width: 100%;
-    padding: 160px 35px 0;
-    margin: 0 auto;
     overflow: hidden;
+    background-color: #ffffff;
   }
 
   .tips {
@@ -217,7 +237,7 @@ $light_gray:#eee;
 
     .title {
       font-size: 26px;
-      color: $light_gray;
+      color: #2288cc;
       margin: 0px auto 40px auto;
       text-align: center;
       font-weight: bold;

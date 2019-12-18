@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <div class="dashboard-text">浪浪之家欢迎 {{ name }}</div>
   </div>
 </template>
 
@@ -21,6 +21,7 @@ export default {
 .dashboard {
   &-container {
     margin: 30px;
+    /*background: url("../../assets/index/index.jpg") no-repeat;*/
   }
   &-text {
     font-size: 30px;
